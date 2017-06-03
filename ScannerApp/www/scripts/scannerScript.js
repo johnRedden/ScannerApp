@@ -21,6 +21,9 @@
                         //just add QR text to page
                         $("#myScanOutput").html(result.text);
 
+
+
+
                     }
                 }
             },
