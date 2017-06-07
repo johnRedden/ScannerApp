@@ -1,15 +1,10 @@
 ﻿$(document).ready(function () {
 
-    console.log("Document ready!");
-
-    $("#myScanButton").click(function () {
-
-        console.log("Button clicked!");
-        //$("#myScanOutput").html("Hello jQuery!");
-
+    $("#scanQRcodeBtn").click(function () {
+        //console.log("QR button clicked")
         scan();
-
     });
+
 
     function scan() {
         //cordova takes care of business!
@@ -19,11 +14,7 @@
                     //only want QR code scanner functionality
                     if (result.format == "QR_CODE") {
                         //just add QR text to page
-                        $("#myScanOutput").html(result.text);
-
-
-
-
+                        $("#scanOutput").html(result.text);
                     }
                 }
             },

@@ -4,35 +4,60 @@
     <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
+          -->  
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
+
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>ScannerApp</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+        <title>COS ScannerApp</title>
+
     </head>
     <body>
-        <button id="myScanButton">Scan</button>
-        <div id="myScanOutput"></div>
-
-        <div class="app">
+        <!-- Splash Screen -->
+        <div id="splashScreen" class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+        <!-- Main Page Content -->
+        <div id="mainPage" class="container">
+            <div w3-include-html="mainPage.html"></div>
 
+            <button id="scanQRcodeBtn">Scan QR Code</button>
+            <div id="scanOutput">Results here.</div>
+            <button id="infoPageBtn" class="btn btn-primary">Information</button>
+        </div>
+        <!-- Informational Content -->
+        <div id="infoPage" class="container">
+            <div w3-include-html="infoPage.html"></div>
+            <button id="mainPageBtn" class="btn btn-primary">Main Page</button>
+        </div>
+
+
+        <!-- Scripts -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
 
+        <!-- Including jQuery and Bootstrap 3-->
         <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+
+        <!-- COS QR scanner functionality -->
         <script type="text/javascript" src="scripts/scannerScript.js"></script>
 
+        <!-- w3.js is for html5 includes -->
+        <script type="text/javascript" src="scripts/w3.js"></script>
+        <script type="text/javascript" src="scripts/pagination.js"></script>
+       
 
     </body>
 </html>

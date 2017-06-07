@@ -1,6 +1,7 @@
 {
   "name": "ScannerApp",
   "dependencies": {
-    "jQuery": "3.2.1"
+    "jQuery": "3.2.1",
+    "bootstrap": "v3.3.7"
   }
 }
