@@ -16,6 +16,12 @@
         -->
          
         <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <style>
+            .visited {
+                background-color: lightgreen !important;
+                color: white !important;
+            }
+        </style>
   
         <title>TCOE Career Expo App</title>
 
@@ -65,21 +71,10 @@
 
             <div data-role="main" class="ui-content">
                 <p>When you find a location, push the button and scan the QR code with your camera.</p>
-                <button class="ui-btn">Scan QR Code</button>
+                <button id="scanQRcodeBtn" class="ui-btn">Scan QR Code</button>
                 <p>Locations from database listed here</p>
-                <ul data-role="listview">
-                    <li data-icon="location"><a href="#">Reg. Window</a></li>
-                    <li data-icon="location"><a href="#">Library</a></li>
-                    <li data-icon="location"><a href="#">Bookstore</a></li>
-                    <li data-icon="location"><a href="#">Cafeteria</a></li>
-                    <li data-icon="location"><a href="#">Reg. Window</a></li>
-                    <li data-icon="location"><a href="#">Library</a></li>
-                    <li data-icon="location"><a href="#">Bookstore</a></li>
-                    <li data-icon="location"><a href="#">Cafeteria</a></li>
-                    <li data-icon="location"><a href="#">Reg. Window</a></li>
-                    <li data-icon="location"><a href="#">Library</a></li>
-                    <li data-icon="location"><a href="#">Bookstore</a></li>
-                    <li data-icon="location"><a href="#">Cafeteria</a></li>
+                <ul id="locationList" data-role="listview">
+                    <li data-icon="location" ><a class="visited" href="#">Loading...</a></li>
                 </ul>
                 
             </div>
