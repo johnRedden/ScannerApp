@@ -36,7 +36,7 @@
         <div data-role="page" id="pageHome">
             <div data-role="header" data-id="foo1" data-position="fixed">
                 <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
-                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
+                <a href="#dialogLogin" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1>Career Expo</h1>
                 <div data-role="navbar">
                     <ul>
@@ -51,9 +51,7 @@
             <div data-role="main" class="ui-content">
 
                 <p>Welcome to TCOE Career Exp.</p>
-                
-                <label for="userRegNumber">Enter TCOE Registration Number</label>
-                <input type="number" name="number" pattern="[0-9]*" id="userRegNumber" value="" placeholder="Enter Reg Number">
+                <p>Front page information here... maybe a logo.</p>
                 <p>Score Here</p>
             </div>
                         
@@ -160,6 +158,27 @@
             </div>
         </div> 
 
+        <!-- Dialog pages (aka Modals)-->
+        <div data-role="page" data-dialog="true" id="dialogLogin">
+            <div data-role="header">
+                <h1>App Login/Logout</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <p>TCOE issued you a unique registraion number found in your packet.</p>
+                <label for="userRegNumber">Enter TCOE Registration Number</label>
+                <input type="number" name="number" pattern="[0-9]*" id="userRegNumber" value="" placeholder="Enter Reg Number">
+                <p>Something here.</p>
+                <button>login/logout Toggle Btn</button>
+            </div>
+
+            <div data-role="footer">
+                <h1>dialog footer</h1>
+            </div>
+        </div> 
+
+        <!--***************************-->
+
         <!-- Scripts -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/customscripts/platformOverrides.js"></script>
@@ -167,7 +186,8 @@
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
  
-       
+        <!-- login/logout functionality -->
+        <script type="text/javascript" src="scripts/customscripts/login.js"></script>
 
         <!-- COS QR scanner functionality -->
         <script type="text/javascript" src="scripts/customscripts/scannerScript.js"></script>
