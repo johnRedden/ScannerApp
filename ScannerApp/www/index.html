@@ -21,6 +21,10 @@
                 background-color: lightgreen !important;
                 color: white !important;
             }
+            .QRscanBtn{
+                margin:auto;
+                width:50% !important;
+            }
         </style>
   
         <title>TCOE Career Expo App</title>
@@ -31,13 +35,15 @@
         <!-- Main app Page-->
         <div data-role="page" id="pageHome">
             <div data-role="header" data-id="foo1" data-position="fixed">
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1>Career Expo</h1>
                 <div data-role="navbar">
                     <ul>
                         <li> <a href="#pageHome" data-icon="home" class="ui-btn-active ui-state-persist">Home</a> </li>
-                        <li> <a href="#pageTour" data-icon="home">Tour</a> </li>
-                        <li> <a href="#pageEvents" data-icon="home">Events</a> </li>
-                        <li> <a href="#pageSurvey" data-icon="home">Survey</a> </li>
+                        <li> <a href="#pageTour" data-icon="navigation">Tour</a> </li>
+                        <li> <a href="#pageEvents" data-icon="calendar">Events</a> </li>
+                        <li> <a href="#pageSurvey" data-icon="edit">Survey</a> </li>
                     </ul>
                 </div>
             </div>              
@@ -58,20 +64,22 @@
         <!-- QR Scanner Page-->
         <div data-role="page" id="pageTour">
             <div data-role="header" data-id="foo1" data-position="fixed">
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1>Career Expo</h1>
                 <div data-role="navbar">
                     <ul>
                         <li> <a href="#pageHome" data-icon="home">Home</a> </li>
-                        <li> <a href="#pageTour" data-icon="home" class="ui-btn-active ui-state-persist">Tour</a> </li>
-                        <li> <a href="#pageEvents" data-icon="home">Events</a> </li>
-                        <li> <a href="#pageSurvey" data-icon="home">Survey</a> </li>
+                        <li> <a href="#pageTour" data-icon="navigation" class="ui-btn-active ui-state-persist">Tour</a> </li>
+                        <li> <a href="#pageEvents" data-icon="calendar">Events</a> </li>
+                        <li> <a href="#pageSurvey" data-icon="edit">Survey</a> </li>
                     </ul>
                 </div>
-            </div>
+            </div> 
 
             <div data-role="main" class="ui-content">
                 <p>When you find a location, push the button and scan the QR code with your camera.</p>
-                <button id="scanQRcodeBtn" class="ui-btn">Scan QR Code</button>
+                <button id="scanQRcodeBtn" class="ui-btn QRscanBtn ui-icon-camera ui-btn-icon-left">Scan QR Code</button>
                 <p>Locations from database listed here</p>
                 <ul id="locationList" data-role="listview">
                     <li data-icon="location" ><a class="visited" href="#">Loading...</a></li>
@@ -86,16 +94,18 @@
         <!-- Events page-->
         <div data-role="page" id="pageEvents">
             <div data-role="header" data-id="foo1" data-position="fixed">
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1>Career Expo</h1>
                 <div data-role="navbar">
                     <ul>
                         <li> <a href="#pageHome" data-icon="home">Home</a> </li>
-                        <li> <a href="#pageTour" data-icon="home">Tour</a> </li>
-                        <li> <a href="#pageEvents" data-icon="home" class="ui-btn-active ui-state-persist">Events</a> </li>
-                        <li> <a href="#pageSurvey" data-icon="home">Survey</a> </li>
+                        <li> <a href="#pageTour" data-icon="navigation">Tour</a> </li>
+                        <li> <a href="#pageEvents" data-icon="calendar" class="ui-btn-active ui-state-persist">Events</a> </li>
+                        <li> <a href="#pageSurvey" data-icon="edit">Survey</a> </li>
                     </ul>
                 </div>
-            </div>
+            </div> 
 
             <div data-role="main" class="ui-content">
                 <p>Check the events you plan on attending.</p>
@@ -126,16 +136,18 @@
         <!-- Survey Page -->
         <div data-role="page" id="pageSurvey">
             <div data-role="header" data-id="foo1" data-position="fixed">
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1>Career Expo</h1>
                 <div data-role="navbar">
                     <ul>
                         <li> <a href="#pageHome" data-icon="home">Home</a> </li>
-                        <li> <a href="#pageTour" data-icon="home">Tour</a> </li>
-                        <li> <a href="#pageEvents" data-icon="home">Events</a> </li>
-                        <li> <a href="#pageSurvey" data-icon="home" class="ui-btn-active ui-state-persist">Survey</a> </li>
+                        <li> <a href="#pageTour" data-icon="navigation">Tour</a> </li>
+                        <li> <a href="#pageEvents" data-icon="calendar">Events</a> </li>
+                        <li> <a href="#pageSurvey" data-icon="edit" class="ui-btn-active ui-state-persist">Survey</a> </li>
                     </ul>
                 </div>
-            </div>
+            </div> 
 
             <div data-role="main" class="ui-content">
 
