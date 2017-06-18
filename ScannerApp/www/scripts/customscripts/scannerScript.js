@@ -6,6 +6,7 @@
 
     //dynamically populate location listview from this array or database.
     //real time refresh of page is overkill but cool.
+   
     var locationsRef = database.ref("locations");
     // on -- value ... is real time
     locationsRef.orderByChild("text").on("value", function (snapshot) {
@@ -15,7 +16,7 @@
         snapshot.forEach(function (data) {
             console.log("The " + data.key + " text is " + data.val().text);
             locations.push(data.key);  //easy solution using an array
-            newListHtml += "<li id='"+data.key+"' data-icon='location'><a href='#'>"+data.val().text+"</a></li>";
+            newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#'>" + data.val().text + "</a></li>";
 
         });
 
@@ -23,7 +24,7 @@
         $("#locationList").listview("refresh");
 
     });
-    
+   
 
     $("#scanQRcodeBtn").click(function () {
         //console.log("QR button clicked")

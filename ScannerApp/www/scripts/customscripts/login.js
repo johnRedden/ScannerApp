@@ -19,16 +19,16 @@ $(document).ready(function () {
 
     // Get a reference to the database service
     database = firebase.database();
+    
+    // QR Code Login Proceedure
+    $("#userQRlogBtn").click(function () {
 
-    // Firebase mainMessage listener (realtime database!)
-    var messageRef = firebase.database().ref('mainMessage');
-    messageRef.on('value', function (snapshot) {
-        console.log(snapshot.val().message);
-        $("#appMessage").html(snapshot.val().message);
+        console.log("QR");
+        loginScan();
+ 
     });
 
-
-    // Login Proceedure
+    // Reg. Number Login Proceedure
     $("#userLogBtn").click(function () {
 
         if ($(this).html() === "logout") {
@@ -41,11 +41,8 @@ $(document).ready(function () {
         var userRegNum = Number($("#userRegNumber").val());
         console.log(userRegNum);
 
-        var ref = firebase.database().ref("participants");
-        // Basic usage of .once() to read the data located at ref.
-        //var xx = ref.orderByChild("registrationNumber").equalTo(userRegNum);
-        //console.log(xx.ref.key);
-        
+        var ref = database.ref("participants");
+           
         ref.orderByChild("registrationNumber").equalTo(userRegNum).once('value')
             .then(function (dataSnapshot) {
 
@@ -56,33 +53,62 @@ $(document).ready(function () {
                     return;
                 }
                 // handle read data.
-                //console.log(dataSnapshot.val().valueOf());
                 dataSnapshot.forEach(function (data) {
                     //TODO: Fix this for goodness sake!  Hopefully, there is only one.
                     nameRef = data.key;
                     nameObj = data.val();
-
-                    $("#logMessage").html("Hi " + nameObj.firstName);
-                    $("#userRegNumber").hide();
-                    $("#userLogBtn").html("logout");
-                    $(".myDialog").html(nameObj.firstName);
-                    $(".myScore").html(nameObj.score);
-
-                    
-                    
+                    loginParticipant();
                 });
 
-
-
-                
             });
         
     });
   
-    
+    function loginScan() {
+        //cordova takes care of business!
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                if (!result.cancelled) {
+                    //only want QR code scanner functionality
+                    if (result.format == "QR_CODE") {
+
+                        var ref = database.ref("participants/" + result.text);
+                        ref.once('value').then(function (dataSnapshot) {
+                            nameRef = dataSnapshot;
+                            nameObj = dataSnapshot.val();
+                            loginParticipant();
+                        });
+
+                    }
+                }
+            },
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        );
+    };
+
+    function loginParticipant() {
+        var loginMessage = "Hi " + nameObj.firstName + ", enjoy the day.";
+        $("#logQRmessage").hide();
+        $("#userQRlogBtn").hide();
+        $("#logMessage").html(loginMessage);
+        $("#userRegNumber").hide();
+        $("#userLogBtn").html("logout");
+        $(".myDialog").html(nameObj.firstName);
+        $(".myScore").html(nameObj.score);
+
+        //TODO: trigger dialog close
+
+        // Firebase mainMessage listener (realtime database!)
+        // Only if logged in.
+        var messageRef = database.ref('mainMessage');
+        messageRef.on('value', function (snapshot) {
+            console.log(snapshot.val().message);
+            $("#appMessage").html(snapshot.val().message);
+        });
+
+    };
 
  
-
-
-
 });
