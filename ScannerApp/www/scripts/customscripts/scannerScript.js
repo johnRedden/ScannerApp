@@ -1,9 +1,28 @@
 ﻿$(document).ready(function () {
 
     //populate this array from database!
-    var locations = ["library", "reg-window", "bookstore", "cafeteria", "kaweah", "john muir","nursing office","administration","the quad"];
+    //var locations = ["library", "reg-window", "bookstore", "cafeteria", "kaweah", "john muir","nursing office","administration","the quad"];
+    var locations = [];
+
     //dynamically populate location listview from this array or database.
-    populateLocationList(locations);
+    //real time refresh of page is overkill but cool.
+    var locationsRef = database.ref("locations");
+    // on -- value ... is real time
+    locationsRef.orderByChild("text").on("value", function (snapshot) {
+        $("#locationList").html("");
+        var newListHtml = "";
+        //snapshot.forEach is a firebase method
+        snapshot.forEach(function (data) {
+            console.log("The " + data.key + " text is " + data.val().text);
+            locations.push(data.key);  //easy solution using an array
+            newListHtml += "<li id='"+data.key+"' data-icon='location'><a href='#'>"+data.val().text+"</a></li>";
+
+        });
+
+        $("#locationList").html(newListHtml);
+        $("#locationList").listview("refresh");
+
+    });
     
 
     $("#scanQRcodeBtn").click(function () {

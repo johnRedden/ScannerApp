@@ -2,6 +2,7 @@
 score = 0;
 nameObj = null;
 nameRef = null;
+var database = null;
 
 $(document).ready(function () {
     
@@ -14,9 +15,10 @@ $(document).ready(function () {
         storageBucket: "",
         messagingSenderId: "405307790686"
     };
-    firebase.initializeApp(config);
+    firebase.initializeApp(config);
+
     // Get a reference to the database service
-    var database = firebase.database();
+    database = firebase.database();
 
     // Firebase mainMessage listener (realtime database!)
     var messageRef = firebase.database().ref('mainMessage');
