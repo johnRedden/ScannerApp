@@ -3,6 +3,7 @@
     //populate this array from database!
     //var locations = ["library", "reg-window", "bookstore", "cafeteria", "kaweah", "john muir","nursing office","administration","the quad"];
     var locations = [];
+    var scores = [];
 
     //dynamically populate location listview from this array or database.
     //real time refresh of page is overkill but cool.
@@ -16,6 +17,7 @@
         snapshot.forEach(function (data) {
             console.log("The " + data.key + " text is " + data.val().text);
             locations.push(data.key);  //easy solution using an array
+            scores.push(data.val().points);
             newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#'>" + data.val().text + "</a></li>";
 
         });
@@ -42,7 +44,16 @@
                         $("#scanOutput").html(result.text);
                         var indexOfScannedLocation = locations.indexOf(result.text);
 
-                        console.log(locations[indexOfScannedLocation]);
+                        console.log("CHA**************")
+                        
+
+                        if (indexOfScannedLocation >= 0) {
+                            var ref = database.ref('participants/' + nameKey);
+                            var xx = Number(nameObj.score) + Number(scores[indexOfScannedLocation]);
+                            ref.update({ "score": xx });
+                        }
+
+                        console.log(indexOfScannedLocation);
                         //turn list item green to indicate that it was visited
                         $("#" + locations[indexOfScannedLocation]+">a").addClass("visited");
                         //Todo:  Add points for found location.

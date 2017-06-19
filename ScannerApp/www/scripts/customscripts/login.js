@@ -22,7 +22,7 @@ $(document).ready(function () {
     // QR Code Login Proceedure
     $("#userQRlogBtn").click(function () {
 
-        console.log("QR");
+        //console.log("QR");
         loginScan();
  
     });
@@ -46,7 +46,7 @@ $(document).ready(function () {
             .then(function (dataSnapshot) {
 
                 console.log(dataSnapshot.val());
-                if (dataSnapshot.val() === null) {
+                if (dataSnapshot.val() == null) {
                     $("#logMessage").html("Registration number not found.");
                     $("#userRegNumber").focus();
                     return;
@@ -69,11 +69,11 @@ $(document).ready(function () {
             function (result) {
                 if (!result.cancelled) {
                     //only want QR code scanner functionality
-                    if (result.format === "QR_CODE") {
+                    if (result.format == "QR_CODE") {
 
                         var ref = database.ref("participants/" + result.text);
                         ref.once('value').then(function (dataSnapshot) {
-                            nameKey = dataSnapshot;
+                            nameKey = dataSnapshot.key;
                             nameObj = dataSnapshot.val();
                             loginParticipant();
                         });
