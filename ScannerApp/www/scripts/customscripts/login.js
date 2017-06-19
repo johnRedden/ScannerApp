@@ -1,7 +1,7 @@
 ﻿// App globals go here
 score = 0;
 nameObj = null;
-nameRef = null;
+nameKey = null;
 var database = null;
 
 $(document).ready(function () {
@@ -55,7 +55,7 @@ $(document).ready(function () {
                 // handle read data.
                 dataSnapshot.forEach(function (data) {
                     //TODO: Fix this for goodness sake!  Hopefully, there is only one.
-                    nameRef = data.key;
+                    nameKey = data.key;
                     nameObj = data.val();
                     loginParticipant();
                 });
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
                         var ref = database.ref("participants/" + result.text);
                         ref.once('value').then(function (dataSnapshot) {
-                            nameRef = dataSnapshot;
+                            nameKey = dataSnapshot;
                             nameObj = dataSnapshot.val();
                             loginParticipant();
                         });
@@ -95,8 +95,8 @@ $(document).ready(function () {
         $("#logMessage").html(loginMessage);
         $("#userRegNumber").hide();
         $("#userLogBtn").html("logout");
-        $(".myDialog").html(nameObj.firstName);
-        $(".myScore").html(nameObj.score);
+        //$(".myDialog").html(nameObj.firstName);
+        //$(".myScore").html(nameObj.score);
 
         //TODO: trigger dialog close
 
@@ -108,6 +108,14 @@ $(document).ready(function () {
             $("#appMessage").html(snapshot.val().message);
         });
 
+        var myRef = database.ref('participants/' + nameKey);
+        myRef.on('value', function (snapshot) {
+            console.log(snapshot.val());
+            $(".myDialog").html(snapshot.val().firstName);
+            $(".myScore").html(snapshot.val().score);
+
+            score = snapshot.val().score; //for when it goes offline, we keep the score held here
+        });
     };
 
  
