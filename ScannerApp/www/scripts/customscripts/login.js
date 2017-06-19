@@ -1,5 +1,4 @@
 ﻿// App globals go here
-score = 0;
 nameObj = null;
 nameKey = null;
 var database = null;
@@ -47,7 +46,7 @@ $(document).ready(function () {
             .then(function (dataSnapshot) {
 
                 console.log(dataSnapshot.val());
-                if (dataSnapshot.val() == null) {
+                if (dataSnapshot.val() === null) {
                     $("#logMessage").html("Registration number not found.");
                     $("#userRegNumber").focus();
                     return;
@@ -70,7 +69,7 @@ $(document).ready(function () {
             function (result) {
                 if (!result.cancelled) {
                     //only want QR code scanner functionality
-                    if (result.format == "QR_CODE") {
+                    if (result.format === "QR_CODE") {
 
                         var ref = database.ref("participants/" + result.text);
                         ref.once('value').then(function (dataSnapshot) {
@@ -113,8 +112,8 @@ $(document).ready(function () {
             console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
-
-            score = snapshot.val().score; //for when it goes offline, we keep the score held here
+            nameObj = snapshot.val(); //holds everything offline in nameObj
+            
         });
     };
 
