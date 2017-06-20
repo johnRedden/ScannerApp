@@ -103,8 +103,9 @@ $(document).ready(function () {
         // Only if logged in.
         var messageRef = database.ref('mainMessage');
         messageRef.on('value', function (snapshot) {
-            console.log(snapshot.val().message);
+            //console.log(snapshot.val().surveyURL);
             $("#appMessage").html(snapshot.val().message);
+            $("#surveyLink").attr("href", snapshot.val().surveyURL);
         });
 
         var myRef = database.ref('participants/' + nameKey);

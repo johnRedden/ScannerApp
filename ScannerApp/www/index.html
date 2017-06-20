@@ -28,6 +28,7 @@
             .message{
                 background-color:white;
             }
+  
         </style>
   
         <title>TCOE Career Expo App</title>
@@ -37,7 +38,7 @@
         
         <!-- Main app Page-->
         <div data-role="page" id="pageHome">
-            <div data-role="header" data-id="foo1" >
+            <div data-role="header" data-id="foo1" >    
                 <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1><img src="images/Logo.png" alt="Logo" align="middle" style="width:114px;height:58px;"></h1>
@@ -149,8 +150,13 @@
             </div> 
 
             <div data-role="main" class="ui-content">
-                <!-- Not sure this is legit -->
+                <p>Link out to Survey (only active after login)</p>
+                <a id="surveyLink" href="" class="ui-btn">link out</a>
+
+                <p>OR iframe embed??</p>
+                
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1kW9y_TsE-l8HJVBgJokWfWe2jkedhHjFQZRhyT1LcFCn-g/viewform?embedded=true"  style='height: 1200px; width: 100%;'  frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        
             </div>
 
             <div data-role="footer" data-id="foo2" data-position="fixed">
