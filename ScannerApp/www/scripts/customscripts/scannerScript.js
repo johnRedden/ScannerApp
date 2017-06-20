@@ -17,7 +17,7 @@
             console.log("The " + data.key + " text is " + data.val().text);
             locationKeys.push(data.key);  //easy solution using an array
             locationObjs.push(data.val());  // the actual location objects
-            newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#'>" + data.val().text + "<span class='ui-li-count'>" + data.val().points +"</span></a></li>";
+            newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#dialogLocationHint'>" + data.val().text + "<span class='ui-li-count'>" + data.val().points +"</span></a></li>";
 
         });
 
