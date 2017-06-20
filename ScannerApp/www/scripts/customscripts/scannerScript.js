@@ -1,9 +1,8 @@
 ﻿$(document).ready(function () {
 
     //populate this array from database!
-    //var locations = ["library", "reg-window", "bookstore", "cafeteria", "kaweah", "john muir","nursing office","administration","the quad"];
-    var locations = [];
-    var scores = [];
+    var locationKeys = [];
+    var locationObjs = [];
 
     //dynamically populate location listview from this array or database.
     //real time refresh of page is overkill but cool.
@@ -16,9 +15,9 @@
         //snapshot.forEach is a firebase method
         snapshot.forEach(function (data) {
             console.log("The " + data.key + " text is " + data.val().text);
-            locations.push(data.key);  //easy solution using an array
-            scores.push(data.val().points);
-            newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#'>" + data.val().text + "</a></li>";
+            locationKeys.push(data.key);  //easy solution using an array
+            locationObjs.push(data.val());  // the actual location objects
+            newListHtml += "<li id='" + data.key + "' data-icon='location'><a href='#'>" + data.val().text + "<span class='ui-li-count'>" + data.val().points +"</span></a></li>";
 
         });
 
@@ -42,20 +41,17 @@
                     if (result.format == "QR_CODE") {
                         //just add QR text to page
                         $("#scanOutput").html(result.text);
-                        var indexOfScannedLocation = locations.indexOf(result.text);
-
-                        console.log("CHA**************")
-                        
+                        var indexOfScannedLocation = locationKeys.indexOf(result.text);                     
 
                         if (indexOfScannedLocation >= 0) {
+                            // get connection to logged in user and update his score
+                            var xx = Number(nameObj.score) + Number(locationObjs[indexOfScannedLocation].points);
                             var ref = database.ref('participants/' + nameKey);
-                            var xx = Number(nameObj.score) + Number(scores[indexOfScannedLocation]);
                             ref.update({ "score": xx });
                         }
 
-                        console.log(indexOfScannedLocation);
                         //turn list item green to indicate that it was visited
-                        $("#" + locations[indexOfScannedLocation]+">a").addClass("visited");
+                        $("#" + locationKeys[indexOfScannedLocation]+">a").addClass("visited");
                         //Todo:  Add points for found location.
                     }
                 }
@@ -66,16 +62,6 @@
         );
     }
 
-    function populateLocationList(locations) {
-        $("#locationList").html("");
-
-        for (i = 0; i < locations.length; i++) {
-            var newListElem = "<li id='" + locations[i] + "' data-icon='location'><a href='#'>" + locations[i] +"</a></li>";
-            $("#locationList").append(newListElem);
-
-        }
-    
-    };
 
 
 });
