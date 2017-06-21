@@ -5,19 +5,7 @@ var database = null;
 
 $(document).ready(function () {
     
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBu0_y7pEs9dAC-1j1CB7Lq_I7HlHjfvnM",
-        authDomain: "tcoeapp.firebaseapp.com",
-        databaseURL: "https://tcoeapp.firebaseio.com",
-        projectId: "tcoeapp",
-        storageBucket: "",
-        messagingSenderId: "405307790686"
-    };
-    firebase.initializeApp(config);
 
-    // Get a reference to the database service
-    database = firebase.database();
     
     // QR Code Login Proceedure
     $("#userQRlogBtn").click(function () {
@@ -110,7 +98,7 @@ $(document).ready(function () {
 
         var myRef = database.ref('participants/' + nameKey);
         myRef.on('value', function (snapshot) {
-            console.log(snapshot.val());
+            //console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
             nameObj = snapshot.val(); //holds everything offline in nameObj

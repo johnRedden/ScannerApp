@@ -78,8 +78,8 @@
             </div> 
 
             <div data-role="main" class="ui-content">
-                <p>When you find a location, push the button and scan the QR code with your camera.</p>
-                <button id="scanQRcodeBtn" class="ui-btn QRscanBtn ui-icon-camera ui-btn-icon-left">Scan QR Code</button>
+                <div id="locationMessage" class="">Please Login.</div>
+                <button id="scanQRcodeBtn" class="ui-btn QRscanBtn ui-icon-camera ui-btn-icon-left">QR Scan QR</button>
                 <p>Locations from database listed here</p>
                 <ul id="locationList" data-role="listview">
                     <li data-icon="location" ><a class="visited" href="#">Loading...</a></li>
@@ -216,6 +216,7 @@
         <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
  
         <!-- login/logout functionality -->
+        <script type="text/javascript" src="scripts/customscripts/firebaseListeners.js"></script>
         <script type="text/javascript" src="scripts/customscripts/login.js"></script>
 
         <!-- COS QR scanner functionality -->
