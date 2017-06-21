@@ -1,10 +1,16 @@
 ﻿// App globals go here
 nameObj = null;
 nameKey = null;
+loggedIn = false;
 var database = null;
 
 $(document).ready(function () {
+
+    $("#surveyOut").show();
+    $("#surveyLink").hide();
+    $("#surveyNotTime").hide();
     
+
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyBu0_y7pEs9dAC-1j1CB7Lq_I7HlHjfvnM",
@@ -32,6 +38,7 @@ $(document).ready(function () {
 
         if ($(this).html() === "logout") {
             //trigger refresh... hack.
+            loggedIn = false;
             location.reload();
             return;
         }
@@ -88,6 +95,7 @@ $(document).ready(function () {
     };
 
     function loginParticipant() {
+        loggedIn = true;
         var loginMessage = "Hi " + nameObj.firstName + ", enjoy the day.";
         $("#logQRmessage").hide();
         $("#userQRlogBtn").hide();
@@ -105,7 +113,20 @@ $(document).ready(function () {
         messageRef.on('value', function (snapshot) {
             //console.log(snapshot.val().surveyURL);
             $("#appMessage").html(snapshot.val().message);
-            $("#surveyLink").attr("href", snapshot.val().surveyURL);
+            $("#surveyLink").attr("src", snapshot.val().surveyURL);
+
+            if ((snapshot.val().surveyView == "on") && (loggedIn == true) ) {
+                $("#surveyOut").hide();
+                $("#surveyLink").show();
+                $("#surveyNotTime").hide();
+            } else if (snapshot.val().surveyView == "off") {
+                $("#surveyOut").hide();
+                $("#surveyLink").hide();
+                $("#surveyNotTime").show();
+            }
+
+      
+
         });
 
         var myRef = database.ref('participants/' + nameKey);
