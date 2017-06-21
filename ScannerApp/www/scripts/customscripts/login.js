@@ -10,6 +10,7 @@ $(document).ready(function () {
     $("#surveyLink").hide();
     $("#surveyNotTime").hide();
     
+<<<<<<< HEAD
 
     // Initialize Firebase
     var config = {
@@ -21,9 +22,9 @@ $(document).ready(function () {
         messagingSenderId: "405307790686"
     };
     firebase.initializeApp(config);
+=======
+>>>>>>> 716eef41024987f51d690a054314cf42b36bceec
 
-    // Get a reference to the database service
-    database = firebase.database();
     
     // QR Code Login Proceedure
     $("#userQRlogBtn").click(function () {
@@ -131,7 +132,7 @@ $(document).ready(function () {
 
         var myRef = database.ref('participants/' + nameKey);
         myRef.on('value', function (snapshot) {
-            console.log(snapshot.val());
+            //console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
             nameObj = snapshot.val(); //holds everything offline in nameObj

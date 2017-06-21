@@ -4,11 +4,11 @@
     var locationKeys = [];
     var locationObjs = [];
 
-    //dynamically populate location listview from this array or database.
-    //real time refresh of page is overkill but cool.
-   
+    var locationKeysToFind = [];
+    var locationKeysFound = [];
+
+    //On app start-up get all Locations from database 
     var locationsRef = database.ref("locations");
-    // on -- value ... is real time
     locationsRef.orderByChild("text").on("value", function (snapshot) {
         $("#locationList").html("");
         var newListHtml = "";
@@ -47,7 +47,16 @@
                             // get connection to logged in user and update his score
                             var xx = Number(nameObj.score) + Number(locationObjs[indexOfScannedLocation].points);
                             var ref = database.ref('participants/' + nameKey);
-                            ref.update({ "score": xx });
+                            
+                  
+                            var dynamicObj = {};
+                            dynamicObj[ locationKeys[indexOfScannedLocation] ] = locationObjs[indexOfScannedLocation].text;
+                            // if not there will create it or updated it 
+
+                            var Vref = database.ref('participants/' + nameKey+'/visitedLocations');
+                            Vref.update(dynamicObj);
+
+                         
                         }
 
                         //turn list item green to indicate that it was visited
@@ -61,6 +70,8 @@
             }
         );
     }
+
+   
 
 
 
