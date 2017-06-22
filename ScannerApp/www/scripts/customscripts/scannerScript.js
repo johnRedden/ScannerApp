@@ -45,16 +45,21 @@
 
                         if (indexOfScannedLocation >= 0) {
                             // get connection to logged in user and update his score
-                            var xx = Number(nameObj.score) + Number(locationObjs[indexOfScannedLocation].points);
-                            var ref = database.ref('participants/' + nameKey);
+                            var xx = Number(participantObj.score) + Number(locationObjs[indexOfScannedLocation].points);
+                            var ref = database.ref('participants/' + participantKey);
                             ref.update({ "score": xx });
-                  
+
+                            //Now populated users visitedLocations property
                             var dynamicObj = {};
                             // dynamicObj[key]=value;
                             dynamicObj[ locationKeys[indexOfScannedLocation] ] = locationObjs[indexOfScannedLocation].text;
                             // if not there will create it or updated it 
-                            var Vref = database.ref('participants/'+ nameKey+'/visitedLocations');
+                            var Vref = database.ref('participants/'+ participantKey+'/visitedLocations');
                             Vref.update(dynamicObj);
+
+                            //store found location keys locally
+                            locationKeysFound.push(locationKeys[indexOfScannedLocation]);
+                            
 
                          
                         }

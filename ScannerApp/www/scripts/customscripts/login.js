@@ -1,6 +1,6 @@
 ﻿// App globals go here
-nameObj = null;
-nameKey = null;
+participantObj = null;
+participantKey = null;
 loggedIn = false;
 var database = null;
 
@@ -10,15 +10,9 @@ $(document).ready(function () {
     $("#surveyLink").hide();
     $("#surveyNotTime").hide();
     
-
-
-    
     // QR Code Login Proceedure
     $("#userQRlogBtn").click(function () {
-
-        //console.log("QR");
         loginScan();
- 
     });
 
     // Reg. Number Login Proceedure
@@ -49,8 +43,8 @@ $(document).ready(function () {
                 // handle read data.
                 dataSnapshot.forEach(function (data) {
                     //TODO: Fix this for goodness sake!  Hopefully, there is only one.
-                    nameKey = data.key;
-                    nameObj = data.val();
+                    participantKey = data.key;
+                    participantObj = data.val();
                     loginParticipant();
                 });
 
@@ -68,8 +62,8 @@ $(document).ready(function () {
 
                         var ref = database.ref("participants/" + result.text);
                         ref.once('value').then(function (dataSnapshot) {
-                            nameKey = dataSnapshot.key;
-                            nameObj = dataSnapshot.val();
+                            participantKey = dataSnapshot.key;
+                            participantObj = dataSnapshot.val();
                             loginParticipant();
                         });
 
@@ -84,14 +78,13 @@ $(document).ready(function () {
 
     function loginParticipant() {
         loggedIn = true;
-        var loginMessage = "Hi " + nameObj.firstName + ", enjoy the day.";
+        var loginMessage = "Hi " + participantObj.firstName + ", enjoy the day.";
         $("#logQRmessage").hide();
         $("#userQRlogBtn").hide();
         $("#logMessage").html(loginMessage);
         $("#userRegNumber").hide();
         $("#userLogBtn").html("logout");
-        //$(".myDialog").html(nameObj.firstName);
-        //$(".myScore").html(nameObj.score);
+
 
         //TODO: trigger dialog close
 
@@ -117,12 +110,12 @@ $(document).ready(function () {
 
         });
 
-        var myRef = database.ref('participants/' + nameKey);
+        var myRef = database.ref('participants/' + participantKey);
         myRef.on('value', function (snapshot) {
             //console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
-            nameObj = snapshot.val(); //holds everything offline in nameObj
+            participantObj = snapshot.val(); //holds everything offline in participantObj
             
         });
     };
