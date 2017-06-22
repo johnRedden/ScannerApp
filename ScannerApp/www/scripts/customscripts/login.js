@@ -4,6 +4,10 @@ participantKey = null;
 loggedIn = false;
 var database = null;
 
+var visitedLocationKeys = [];
+var locationKeys = [];
+var locationObjs = [];
+
 $(document).ready(function () {
 
     $("#surveyOut").show();
@@ -106,19 +110,86 @@ $(document).ready(function () {
                 $("#surveyNotTime").show();
             }
 
-      
-
         });
 
+        
+
+        // Firebase participant listener  (everything about the participant)
         var myRef = database.ref('participants/' + participantKey);
         myRef.on('value', function (snapshot) {
             //console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
             participantObj = snapshot.val(); //holds everything offline in participantObj
+            var visitedObj = participantObj.visitedLocations;
+
+            //populate visited list in app
+            $("#visitedLocationList").html("");
+            var newVListHtml = "";
+
+            for (key in visitedObj) {
+                visitedLocationKeys.push(key);
+                //console.log(key);
+                //console.log(visitedObj[key]);
+                newVListHtml += "<li id='" + key + "' data-icon='check'><a href='#dialogLocationHint' class='visited'>" + visitedObj[key] + "</a></li>";
+            }
+            $("#visitedLocationList").html(newVListHtml);
+            $("#visitedLocationList").listview("refresh");
+
+            populateLocationList();
             
         });
+
+    
+        //Firebase locations listener
+        //Also, listen for new locations real time
+        var locationsRef = database.ref("locations");
+        locationsRef.orderByChild("text").on("value", function (snapshot) {
+ 
+            //snapshot.forEach is a firebase method
+            snapshot.forEach(function (data) {
+                
+                var alreadyFound = visitedLocationKeys.indexOf(data.key);
+                if (alreadyFound < 0) { //not found yet
+                    //console.log("The " + data.key + " text is " + data.val().text);
+                    locationKeys.push(data.key);  //easy solution using an array
+                    locationObjs.push(data.val());  // the actual location objects
+                 }
+
+            });
+
+            populateLocationList();
+
+        });
+
+
     };
+
+    function populateLocationList() {
+        // no database calls here
+        $("#locationList").html("");
+        var newListHtml = "";
+
+        for (var i = 0; i < locationKeys.length; i++){
+            var alreadyFound = visitedLocationKeys.indexOf(locationKeys[i]);
+            if (alreadyFound < 0) { //not found yet
+                //console.log("The " + data.key + " text is " + data.val().text);
+                newListHtml += "<li id='" + locationKeys[i] + "' data-icon='location'><a href='#dialogLocationHint'>" + locationObjs[i].text + "<span class='ui-li-count'>" + locationObjs[i].points + "</span></a></li>";
+            }
+        }
+        if (newListHtml === "") {
+            //You Win... no more locations
+            newListHtml = "<li id='' data-icon='heart'><a href='#'>You Win!</a></li>";
+        }
+        $("#locationList").html(newListHtml);
+        $("#locationList").listview("refresh");
+
+
+    }
+
+    
+
+
 
  
 });

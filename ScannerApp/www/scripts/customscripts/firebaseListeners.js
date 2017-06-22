@@ -14,7 +14,7 @@
     // Get a reference to the database service
     database = firebase.database();
 
-
+    //TODO: put all firebase listeners here maybe??
 
 
 });
