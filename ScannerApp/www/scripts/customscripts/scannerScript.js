@@ -47,13 +47,13 @@
                             // get connection to logged in user and update his score
                             var xx = Number(nameObj.score) + Number(locationObjs[indexOfScannedLocation].points);
                             var ref = database.ref('participants/' + nameKey);
-                            
+                            ref.update({ "score": xx });
                   
                             var dynamicObj = {};
+                            // dynamicObj[key]=value;
                             dynamicObj[ locationKeys[indexOfScannedLocation] ] = locationObjs[indexOfScannedLocation].text;
                             // if not there will create it or updated it 
-
-                            var Vref = database.ref('participants/' + nameKey+'/visitedLocations');
+                            var Vref = database.ref('participants/'+ nameKey+'/visitedLocations');
                             Vref.update(dynamicObj);
 
                          

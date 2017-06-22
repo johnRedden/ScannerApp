@@ -10,20 +10,7 @@ $(document).ready(function () {
     $("#surveyLink").hide();
     $("#surveyNotTime").hide();
     
-<<<<<<< HEAD
 
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBu0_y7pEs9dAC-1j1CB7Lq_I7HlHjfvnM",
-        authDomain: "tcoeapp.firebaseapp.com",
-        databaseURL: "https://tcoeapp.firebaseio.com",
-        projectId: "tcoeapp",
-        storageBucket: "",
-        messagingSenderId: "405307790686"
-    };
-    firebase.initializeApp(config);
-=======
->>>>>>> 716eef41024987f51d690a054314cf42b36bceec
 
     
     // QR Code Login Proceedure
