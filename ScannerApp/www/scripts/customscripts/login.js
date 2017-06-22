@@ -1,13 +1,4 @@
-﻿// App globals go here
-participantObj = null;
-participantKey = null;
-loggedIn = false;
-var database = null;
-
-var visitedLocationKeys = [];
-var locationKeys = [];
-var locationObjs = [];
-
+﻿
 $(document).ready(function () {
 
     $("#surveyOut").show();
@@ -31,10 +22,9 @@ $(document).ready(function () {
         
         //get the number from the input box
         var userRegNum = Number($("#userRegNumber").val());
-        console.log(userRegNum);
 
+        // call database to get information about participant with particular reg. number
         var ref = database.ref("participants");
-           
         ref.orderByChild("registrationNumber").equalTo(userRegNum).once('value')
             .then(function (dataSnapshot) {
 
@@ -145,7 +135,9 @@ $(document).ready(function () {
         //Also, listen for new locations real time
         var locationsRef = database.ref("locations");
         locationsRef.orderByChild("text").on("value", function (snapshot) {
- 
+            //Clear the local arrays
+            locationKeys = [];
+            locationObjs = [];
             //snapshot.forEach is a firebase method
             snapshot.forEach(function (data) {
                 

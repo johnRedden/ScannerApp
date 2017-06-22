@@ -11,6 +11,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="shortcut icon" href="#" />
         <!--
         <link rel="stylesheet" type="text/css" href="css/index.css">
         -->
@@ -35,6 +36,7 @@
 
     </head>
     <body>
+
         
         <!-- Main app Page-->
         <div data-role="page" id="pageHome">
@@ -53,8 +55,9 @@
             </div>              
 
             <div data-role="main" class="ui-content">
+                <!-- Cordova Load Screen-->
                 <p>Welcome to TCOE Career Exp.</p>
-                <div id="appMessage" class="ui-content message">Please log in.</div>
+                <div id="appMessage" class="ui-content message">App initializing...</div>
             </div>
                         
             <div data-role="footer" data-id="foo2" data-position="fixed">
@@ -203,30 +206,19 @@
         <!--***************************-->
 
         <!-- Scripts -->
-
+        <!-- need local copy at some point -->
         <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-        <script>
-
-
- 
-        </script>
-
 
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/customscripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/customscripts/index.js"></script>
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
  
         <!-- login/logout functionality -->
-        <script type="text/javascript" src="scripts/customscripts/firebaseListeners.js"></script>
         <script type="text/javascript" src="scripts/customscripts/login.js"></script>
 
         <!-- COS QR scanner functionality -->
         <script type="text/javascript" src="scripts/customscripts/scannerScript.js"></script>
-
-        <!-- w3.js is for html5 includes -->
-        <script type="text/javascript" src="scripts/w3.js"></script>
        
 
     </body>
