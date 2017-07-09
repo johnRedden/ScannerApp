@@ -120,12 +120,22 @@ $(document).ready(function () {
                 visitedLocationKeys.push(key);
                 //console.log(key);
                 //console.log(visitedObj[key]);
-                newVListHtml += "<li id='" + key + "' data-icon='check'><a href='#dialogLocationHint' class='visited'>" + visitedObj[key] + "</a></li>";
+                newVListHtml += "<li class='found' id='" + key + "' data-icon='check'><a href='#dialogLocationHint' class='visited'>" + visitedObj[key] + "</a></li>";
             }
             $("#visitedLocationList").html(newVListHtml);
-            $("#visitedLocationList").listview("refresh");
+            $("#visitedLocationList").listview().listview("refresh");            
 
             populateLocationList();
+
+            $(".found").each(function () {
+                $(this).click(function () {
+                    // Changing hint for visited locations
+                    var t = $(this).attr('id');
+                    var ind = visitedLocationKeys.indexOf(t);
+                    //window.alert(visitedObj[t]);
+                    $("#Hint").text("You've already found " + visitedObj[t]);
+                });
+            });
             
         });
 
@@ -175,11 +185,13 @@ $(document).ready(function () {
          // adding click event to each #location li
         $("#locationList li").each(function () {
             $(this).click(function () {             
-                // Changing hint
+                // Changing hint for not visited locations
                 var k = $(this).attr('id');
                 var ind = locationKeys.indexOf(k);
                 $("#Hint").text(locationObjs[ind].hint);
             });
         });
+
+
     } 
 });
