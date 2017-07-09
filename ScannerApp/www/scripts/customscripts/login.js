@@ -27,7 +27,6 @@ $(document).ready(function () {
         var ref = database.ref("participants");
         ref.orderByChild("registrationNumber").equalTo(userRegNum).once('value')
             .then(function (dataSnapshot) {
-
                 console.log(dataSnapshot.val());
                 if (dataSnapshot.val() == null) {
                     $("#logMessage").html("Registration number not found.");
@@ -153,20 +152,17 @@ $(document).ready(function () {
             populateLocationList();
 
         });
-
-
     };
 
     function populateLocationList() {
         // no database calls here
         $("#locationList").html("");
         var newListHtml = "";
-
         for (var i = 0; i < locationKeys.length; i++){
             var alreadyFound = visitedLocationKeys.indexOf(locationKeys[i]);
             if (alreadyFound < 0) { //not found yet
-                //console.log("The " + data.key + " text is " + data.val().text);
-                newListHtml += "<li id='" + locationKeys[i] + "' data-icon='location'><a href='#dialogLocationHint'>" + locationObjs[i].text + "<span class='ui-li-count'>" + locationObjs[i].points + "</span></a></li>";
+                //console.log("The " + data.key + " text is " + data.val().text);                                   
+                newListHtml += "<li id='" + locationKeys[i] + "' data-icon='location'><a href='#dialogLocationHint' >" + locationObjs[i].text + "<span class='ui-li-count'>" + locationObjs[i].points + "</span></a></li>";
             }
         }
         if (newListHtml === "") {
@@ -174,14 +170,16 @@ $(document).ready(function () {
             newListHtml = "<li id='' data-icon='heart'><a href='#'>You Win!</a></li>";
         }
         $("#locationList").html(newListHtml);
-        $("#locationList").listview("refresh");
+        $("#locationList").listview().listview("refresh");
 
-
-    }
-
-    
-
-
-
- 
+         // adding click event to each #location li
+        $("#locationList li").each(function () {
+            $(this).click(function () {             
+                // Changing hint
+                var k = $(this).attr('id');
+                var ind = locationKeys.indexOf(k);
+                $("#Hint").text(locationObjs[ind].hint);
+            });
+        });
+    } 
 });
