@@ -99,6 +99,20 @@ $(document).ready(function () {
                 $("#surveyNotTime").show();
             }
 
+            function alertDismissed() {
+                // do something
+            }
+
+            navigator.notification.alert(
+                snapshot.val().message,  // message
+                alertDismissed,         // callback
+                'Main Message',            // title
+                'Ok'                  // buttonName
+            );
+            navigator.notification.beep(1);
+
+
+
         });
 
         
