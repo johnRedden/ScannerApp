@@ -162,7 +162,39 @@ $(document).ready(function () {
             populateLocationList();
 
         });
+    
+
+        var eventsRef = database.ref("events");
+        eventsRef.orderByChild("text").on("value", function (snapshot) {
+            //Clear the local arrays
+            eventKeys = [];
+            eventObjs = [];
+
+            //snapshot.forEach is a firebase method
+            snapshot.forEach(function (data) {
+
+                eventKeys.push(data.key);
+                eventObjs.push(data.val());
+
+            });
+            populateEventList();
+        });
     };
+
+
+    function populateEventList() {
+        //$("#eventList").html("");
+        var newListHtml = "";
+        var registration = "ok";
+        var checked = "";
+        for (var i = 0; i < eventKeys.length; i++) {
+            newListHtml += "<li><label for='" + eventObjs[i].text + "'><h3>" + eventObjs[i].text + "      <span class='ui-mini'>Start Time: " + eventObjs[i].startTime + "</span></h3><p>" + eventObjs[i].description + "</p></label><input type='checkbox' id='" + eventObjs[i].text + "'></li>";       
+            //window.alert(eventKeys[i]);
+        }
+        $("#eventList").append(newListHtml).trigger("create");
+    }
+
+
 
     function populateLocationList() {
         // no database calls here
@@ -191,7 +223,5 @@ $(document).ready(function () {
                 $("#Hint").text(locationObjs[ind].hint);
             });
         });
-
-
     } 
 });

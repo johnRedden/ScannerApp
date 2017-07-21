@@ -13,7 +13,8 @@ participantKey = null;
 var visitedLocationKeys = [];
 var locationKeys = [];
 var locationObjs = [];
-
+var eventKeys = [];
+var eventObjs = [];
 
 (function () {
     "use strict";
