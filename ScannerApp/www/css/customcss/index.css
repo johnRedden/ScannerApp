@@ -1,10 +1,21 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.fr {
-    float:right;
+
+/*h1.ui-title {
+    margin: 1px;
+    padding:1px;
+    padding:.7em 0;
+}*/
+
+img #COSbanner{
+    /*display:initial;
+    width: 200px;
+    height: 200px;*/
+    /*border:10px solid blue;*/
 }
-body {
+
+/*body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
     -webkit-user-select: none;
@@ -96,4 +107,4 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
-}
+}*/

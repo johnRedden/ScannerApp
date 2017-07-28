@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         -->
          
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
         <style>
             .visited {
                 background-color: lightgreen !important;
@@ -29,9 +29,15 @@
             .message{
                 background-color:white;
             }
+            h1.ui-title {
+                margin: 1px;
+                padding: 1px;
+                /*padding:.7em 0;*/
+            }
   
         </style>
-  
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
         <title>TCOE Career Expo App</title>
 
     </head>
@@ -40,10 +46,10 @@
         
         <!-- Main app Page-->
         <div data-role="page" id="pageHome">
-            <div data-role="header" data-id="foo1" >    
+            <div data-role="header" data-id="foo1" >
                 <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
-                <h1><img src="images/Logo.png" alt="Logo" align="middle" style="width:114px;height:58px;"></h1>
+                <h1><img id="COSbanner" src="images/Logo.png" alt="Logo" align="middle" style="width:100%;height:58px;"></h1>
                 <div data-role="navbar">
                     <ul>
                         <li> <a href="#pageHome" data-transition="none" data-icon="home" class="ui-btn-active ui-state-persist">Home</a> </li>
