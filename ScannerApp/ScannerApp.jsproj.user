@@ -11,7 +11,7 @@
     <DebuggerFlavor>iOSEmulatoriPhone6S</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x64'">
-    <DebuggerFlavor>WindowsSimulator</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocal</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
     <DebuggerFlavor>WindowsMobileEmulator</DebuggerFlavor>
