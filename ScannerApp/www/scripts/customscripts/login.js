@@ -120,6 +120,7 @@
             //console.log(snapshot.val());
             $(".myDialog").html(snapshot.val().firstName);
             $(".myScore").html(snapshot.val().score);
+            $("#scoreMessage").html("Your current score is: " + snapshot.val().score + ". Scan more locations to gain points!"); //score modal message
             participantObj = snapshot.val(); //holds everything offline in participantObj
             var visitedObj = participantObj.visitedLocations;
 

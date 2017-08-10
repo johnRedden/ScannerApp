@@ -55,7 +55,7 @@
         <!-- Main app Page-->
         <div data-role="page" id="pageHome">
             <div style="background-color:white" data-role="header" data-id="foo1" >
-                <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#dialogScore" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1 ><img id="COSbanner" src="images/Logo.png" alt="Logo" align="middle" style="width:100%;height:45px;"></h1>
                 <div data-role="navbar">
@@ -80,7 +80,7 @@
         <!-- QR Scanner Page-->
         <div data-role="page" id="pageTour">
             <div class="ExpoHeader" data-role="header" data-id="foo1" >
-                <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#dialogScore" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1 class="ExpoImage"><img src="images/Logo.png" alt="Logo" align="middle" style="width:114px;height:58px;" ></h1>
                 <div data-role="navbar">
@@ -115,7 +115,7 @@
         <!-- Events page-->
         <div data-role="page" id="pageEvents">
             <div data-role="header" data-id="foo1" >
-                <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#dialogScore" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1><img src="images/Logo.png" alt="Logo" align="middle" style="width:114px;height:58px;"></h1>
                 <div data-role="navbar">
@@ -162,7 +162,7 @@
         <!-- Survey Page -->
         <div data-role="page" id="pageSurvey">
             <div data-role="header" data-id="foo1" >
-                <a href="#" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
+                <a href="#dialogScore" class="myScore ui-btn ui-btn-inline ui-corner-all ui-icon-star ui-btn-icon-left">0</a>
                 <a href="#dialogLogin" class="myDialog ui-btn ui-btn-inline ui-corner-all ui-icon-user ui-btn-icon-right ">login</a>
                 <h1><img src="images/Logo.png" alt="Logo" align="middle" style="width:114px;height:58px;"></h1>
                 <div data-role="navbar">
@@ -214,6 +214,21 @@
 
             <div data-role="main" class="ui-content">
                 <p id="Hint">Hints coming soon...</p>
+            </div>
+
+            <div data-role="footer">
+                <h1>TCOE App</h1>
+            </div>
+        </div> 
+
+        <!-- Score Modal -->
+        <div data-role="page" data-dialog="true" id="dialogScore">
+            <div data-role="header">
+                <h1>App Score</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <p id="scoreMessage">This is where your score will be</p>
             </div>
 
             <div data-role="footer">
