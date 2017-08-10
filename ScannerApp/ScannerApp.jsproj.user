@@ -13,4 +13,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x64'">
     <DebuggerFlavor>WindowsSimulator</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
+    <DebuggerFlavor>WindowsMobileEmulator</DebuggerFlavor>
+    <WindowsMobileEmulatorID>WindowsPhoneInstallEmulators;Install Windows Phone Emulators...</WindowsMobileEmulatorID>
+  </PropertyGroup>
 </Project>
