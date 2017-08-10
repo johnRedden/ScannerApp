@@ -3,6 +3,7 @@
 
     $("#scanQRcodeBtn").click(function () {
         //console.log("QR button clicked")
+        
         scan();
     });
 
@@ -10,34 +11,44 @@
         //cordova takes care of business!
         cordova.plugins.barcodeScanner.scan(
             function (result) {
+                
                 if (!result.cancelled) {
+                   
                     //only want QR code scanner functionality
                     if (result.format == "QR_CODE") {
+                        window.alert(visitedLocationKeys.indexOf(result.text)); //-1
                         //just add QR text to page
                         $("#scanOutput").html(result.text);
                         var indexOfScannedLocation = locationKeys.indexOf(result.text);                     
-
+                        
                         if (indexOfScannedLocation >= 0) {
                             // get connection to logged in user and update his score                           
                             var ref = database.ref('participants/' + participantKey);
-
+                           
                             //Now populated users visitedLocations property
                             var dynamicObj = {};
                             // dynamicObj[key]=value;
+                            window.alert(visitedLocationKeys.indexOf(result.text)); //-1
                             dynamicObj[ locationKeys[indexOfScannedLocation] ] = locationObjs[indexOfScannedLocation].text;
-                            // if not there will create it or updated it 
-                            var Vref = database.ref('participants/'+ participantKey+'/visitedLocations');
+                           
+                            // if not there will create it or updated it
+                            var Vref = database.ref('participants/' + participantKey + '/visitedLocations');
+                            var visitedIndexCheck = visitedLocationKeys.indexOf(result.text);//-1
                             Vref.update(dynamicObj);
-
-                            //store found location keys locally
-                            locationKeysFound.push(locationKeys[indexOfScannedLocation]);
                             
+                            //store found location keys locally
+                            
+
+                            //locationKeysFound.push(locationKeys[indexOfScannedLocation]);
+
+                           
                             //checking visited list to not double count points, etc
-                            if (visitedLocationKeys.indexOf(result.text) < 0) {
+                            if (visitedIndexCheck < 0) {
                                 var xx = Number(participantObj.score) + Number(locationObjs[indexOfScannedLocation].points);
                                 ref.update({ "score": xx });
+                                window.alert("ok5");
                             }                     
-                         
+                            
                         }
 
                         //turn list item green to indicate that it was visited

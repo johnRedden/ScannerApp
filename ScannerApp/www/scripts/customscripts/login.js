@@ -172,7 +172,7 @@ $(document).ready(function () {
                  }
 
             });
-
+            window.alert("pop ok");
             populateLocationList();
 
         });
