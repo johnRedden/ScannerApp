@@ -16,7 +16,7 @@
                    
                     //only want QR code scanner functionality
                     if (result.format == "QR_CODE") {
-                        window.alert(visitedLocationKeys.indexOf(result.text)); //-1
+                       
                         //just add QR text to page
                         $("#scanOutput").html(result.text);
                         var indexOfScannedLocation = locationKeys.indexOf(result.text);                     
@@ -28,7 +28,7 @@
                             //Now populated users visitedLocations property
                             var dynamicObj = {};
                             // dynamicObj[key]=value;
-                            window.alert(visitedLocationKeys.indexOf(result.text)); //-1
+                            //window.alert(visitedLocationKeys.indexOf(result.text)); //-1
                             dynamicObj[ locationKeys[indexOfScannedLocation] ] = locationObjs[indexOfScannedLocation].text;
                            
                             // if not there will create it or updated it
@@ -46,7 +46,7 @@
                             if (visitedIndexCheck < 0) {
                                 var xx = Number(participantObj.score) + Number(locationObjs[indexOfScannedLocation].points);
                                 ref.update({ "score": xx });
-                                window.alert("ok5");
+                              
                             }                     
                             
                         }

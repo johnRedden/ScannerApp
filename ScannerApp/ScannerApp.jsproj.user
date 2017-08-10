@@ -2,19 +2,12 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
     <DebuggerFlavor>SimulateGalaxyS5</DebuggerFlavor>
-    <AndroidEmulatorID>AndroidEmulator;Google Emulator - Phone</AndroidEmulatorID>
+    <AndroidEmulatorID>AndroidDevice;Device</AndroidEmulatorID>
   </PropertyGroup>
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|iOS'">
     <DebuggerFlavor>iOSEmulatoriPhone6S</DebuggerFlavor>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x64'">
-    <DebuggerFlavor>WindowsLocal</DebuggerFlavor>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Windows-x86'">
-    <DebuggerFlavor>WindowsMobileEmulator</DebuggerFlavor>
-    <WindowsMobileEmulatorID>WindowsPhoneInstallEmulators;Install Windows Phone Emulators...</WindowsMobileEmulatorID>
   </PropertyGroup>
 </Project>

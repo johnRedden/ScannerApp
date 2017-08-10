@@ -169,7 +169,6 @@
                  }
 
             });
-            window.alert("pop ok");
             populateLocationList();
 
         });
