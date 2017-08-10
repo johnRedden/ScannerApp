@@ -1,6 +1,5 @@
-﻿
-$(document).ready(function () {
-
+﻿$(document).ready(function () {
+    
     $("#surveyOut").show();
     $("#surveyLink").hide();
     $("#surveyNotTime").hide();
