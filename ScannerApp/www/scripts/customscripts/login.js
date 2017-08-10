@@ -1,6 +1,5 @@
-﻿
-$(document).ready(function () {
-
+﻿$(document).ready(function () {
+    
     $("#surveyOut").show();
     $("#surveyLink").hide();
     $("#surveyNotTime").hide();
@@ -110,8 +109,6 @@ $(document).ready(function () {
                 'Ok'                  // buttonName
             );
             navigator.notification.beep(1);
-
-
 
         });
 
@@ -238,4 +235,12 @@ $(document).ready(function () {
             });
         });
     } 
+
+
+
+    
+
+
+
+
 });
