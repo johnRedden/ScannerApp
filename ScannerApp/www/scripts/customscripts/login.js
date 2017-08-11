@@ -26,7 +26,7 @@
         var ref = database.ref("participants");
         ref.orderByChild("registrationNumber").equalTo(userRegNum).once('value')
             .then(function (dataSnapshot) {
-                console.log(dataSnapshot.val());
+                //console.log(dataSnapshot.val());
                 if (dataSnapshot.val() == null) {
                     $("#logMessage").html("Registration number not found.");
                     $("#userRegNumber").focus();
