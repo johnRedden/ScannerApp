@@ -38,6 +38,7 @@
                     participantKey = data.key;
                     participantObj = data.val();
                     loginParticipant();
+
                 });
 
             });
@@ -70,6 +71,7 @@
 
     function loginParticipant() {
         loggedIn = true;
+        $("#locationMessage").hide();
         var loginMessage = "Hi " + participantObj.firstName + ", enjoy the day.";
         $("#logQRmessage").hide();
         $("#userQRlogBtn").hide();
