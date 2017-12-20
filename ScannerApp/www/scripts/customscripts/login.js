@@ -20,7 +20,7 @@
         }
         
         //get the number from the input box
-        var userRegNum = Number($("#userRegNumber").val());
+        var userRegNum = ($("#userRegNumber").val());
 
         // call database to get information about participant with particular reg. number
         var ref = database.ref("participants");
