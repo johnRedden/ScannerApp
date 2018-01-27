@@ -8,9 +8,9 @@ $(document).ready(function () {
     var currDay = d.getDay();
     var currHour = d.getHours();
     var currMin = d.getMinutes();
-    var notifyDay
-    var notifyHour
-    var notifyMin
+    var notifyDay;
+    var notifyHour;
+    var notifyMin;
 
     
 
