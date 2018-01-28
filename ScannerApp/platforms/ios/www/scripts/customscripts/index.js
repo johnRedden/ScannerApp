@@ -50,6 +50,7 @@ var eventObjs = [];
     };
 
     
+    
 
     function onPause() {
         // TODO: This application has been suspended. Save application state here.
@@ -58,4 +59,22 @@ var eventObjs = [];
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
+    document.addEventListener('deviceready', function () {
+    // Enable to debug issues.
+    // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+    
+    var notificationOpenedCallback = function(jsonData) {
+      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+    };
+
+    window.plugins.OneSignal
+        .startInit("ba2f841b-3bdb-46f3-89fa-0e1f45eaab2a")
+        .handleNotificationOpened(notificationOpenedCallback)
+        .endInit();
+  
+        // Call syncHashedEmail anywhere in your app if you have the user's email.
+        // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
+        // window.plugins.OneSignal.syncHashedEmail(userEmail);
+    }, false);
+    window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 4});
 } )();

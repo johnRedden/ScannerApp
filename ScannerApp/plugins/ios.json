@@ -16,6 +16,9 @@
     "phonegap-plugin-barcodescanner": {
       "CAMERA_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "io.cordova.myapp804c9b"
     }
   },
   "dependent_plugins": {

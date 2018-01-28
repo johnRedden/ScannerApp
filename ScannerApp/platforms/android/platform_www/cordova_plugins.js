@@ -23,6 +23,14 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "id": "onesignal-cordova-plugin.OneSignal",
+        "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+        "pluginId": "onesignal-cordova-plugin",
+        "clobbers": [
+            "OneSignal"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -31,7 +39,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-dialogs": "1.3.3",
     "cordova-plugin-whitelist": "1.2.2",
-    "phonegap-plugin-barcodescanner": "6.0.6"
+    "phonegap-plugin-barcodescanner": "6.0.6",
+    "onesignal-cordova-plugin": "2.2.5"
 };
 // BOTTOM OF METADATA
 });

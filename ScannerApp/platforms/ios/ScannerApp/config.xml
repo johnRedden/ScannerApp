@@ -3,6 +3,10 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="HandleOpenUrl">
         <param name="ios-package" value="CDVHandleOpenURL" />
         <param name="onload" value="true" />
@@ -76,4 +80,7 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="SplashScreen" value="screen" />
     <preference name="windows-target-version" value="10.0" />
+    <feature name="OneSignalPush">
+        <param name="ios-package" value="OneSignalPush" />
+    </feature>
 </widget>

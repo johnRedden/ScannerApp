@@ -89,6 +89,7 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "phonegap-plugin-barcodescanner/myapp804c9b-barcodescanner.gradle"
+apply from: "onesignal-cordova-plugin/myapp804c9b-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -250,6 +251,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile project(path: "CordovaLib", configuration: "debug")
     releaseCompile project(path: "CordovaLib", configuration: "release")
+    compile "com.onesignal:OneSignal:3.7.1"
     // SUB-PROJECT DEPENDENCIES END
 }
 
