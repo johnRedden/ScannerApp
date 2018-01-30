@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "io.cordova.myapp804c9b"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
     },
@@ -17,13 +14,15 @@
       "CAMERA_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
     },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "io.cordova.myapp804c9b"
+    },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
-    }
-  },
-  "dependent_plugins": {
+    },
     "cordova-plugin-compat": {
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
     }
-  }
+  },
+  "dependent_plugins": {}
 }

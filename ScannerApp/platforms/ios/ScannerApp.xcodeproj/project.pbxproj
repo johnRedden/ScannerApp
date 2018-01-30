@@ -8,73 +8,73 @@
 
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
-		0FC2F68B087D42BD86ADF826 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0B51FBEFCB4D468A5FA4E1 /* AVFoundation.framework */; };
-		1C06EDE285D64C98BA3AE4D8 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 925BFEED64BD4578A6FFCDAC /* CDVNotification.bundle */; };
+		06007E14BEEB468BA01D6576 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC978C4B183D4FA98990D8AB /* CDVNotification.bundle */; };
+		1D1CF4E64BE6475F9D10BE05 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E0931FA43142738A3844EB /* CoreImage.framework */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1F435311EECB46DA9599BB68 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2B70054D1244FAEB832DCC9 /* zxing-all-in-one.cpp */; };
+		229C62AE902544D29BF3CA8D /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2DEC07A204C38A1BA41F1 /* libiconv.dylib */; };
+		22E02C9C59694A5F96B15D10 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C359A13943B34296B07A6DED /* zxing-all-in-one.cpp */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		322285442BB5EE405084C93C /* libPods-ScannerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60633BE78F1672EE9D312E1E /* libPods-ScannerApp.a */; };
-		551110D9844D47BAAAE22968 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0486E0B370D04F0CA3B1BC6C /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		32B7FFFEDEE24B8E862B5C59 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A23388F77674C26AC4F11FE /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3804756B3A8595EDAFCAF81F /* libPods-ScannerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02956FD027C14B4D6CFC2C6C /* libPods-ScannerApp.a */; };
+		39E31F7EA3C24AEA9D47F01B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32776DFA8B1149B8913FEC28 /* AVFoundation.framework */; };
+		5A48AADE2CB748D98E34B50D /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = DF362A4F206E4F618ABE9DC1 /* CDVNotification.m */; };
+		5B1074CA2E9D41FAB31E4420 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2E6984C39A4526B7B45FA1 /* SystemConfiguration.framework */; };
+		6A90786DB73C4C99BD9EB37B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433A3617CE19414B82A602A0 /* QuartzCore.framework */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		85A9BA78DC1F46BABA20134B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C61360D561747A29EBAAD8E /* QuartzCore.framework */; };
-		86028C8A201E0413002C2003 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 86028C89201E0413002C2003 /* NotificationService.m */; };
-		86028C8E201E0413002C2003 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 86028C86201E0413002C2003 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8649EE91201E0699002C0AFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8649EE90201E0699002C0AFF /* UIKit.framework */; };
-		8649EE92201E069F002C0AFF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F220158C0D574381B636472D /* SystemConfiguration.framework */; };
-		8649EE94201E06E0002C0AFF /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8649EE93201E06E0002C0AFF /* OneSignal.framework */; };
-		8828D258DA944EEA8D58262C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474ED111029F46A8BB7845AC /* CoreImage.framework */; };
-		9DE1064C738745C690F28595 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 86385DAFC1464EE88F98E036 /* CDVNotification.m */; };
-		C124F3B1252A424C96B45FED /* OneSignalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E8CC6DD2B4D5BAF0B44DE /* OneSignalPush.m */; };
-		CD232B9848BF4A378E03F783 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F234F18C50D41D49DDB177C /* CoreVideo.framework */; };
-		CF24C0B6D1B14DF4B7E629AE /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C33BCDC382A04E9086E7623B /* CDVBarcodeScanner.bundle */; };
-		D6C617DC6EB849D49A48A51C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C991C52394054B2CA99FCD6E /* libiconv.dylib */; };
-		DDFEA150858846C588CB542F /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCC6A2536BA4AB79F22E09F /* scannerOverlay.xib */; };
-		E3D309CA45B244339BA41251 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F220158C0D574381B636472D /* SystemConfiguration.framework */; };
-		EB3406112B714D81B43A84FE /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = C885840C707544A586D321BE /* CDVBarcodeScanner.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		72CF9944777F43A9B4584B26 /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DDBED82CD44720BA6CECEB /* scannerOverlay.xib */; };
+		8644A6892021136E0024463A /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8644A6882021136E0024463A /* NotificationService.m */; };
+		8644A68D2021136E0024463A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8644A6852021136E0024463A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8644A692202113C30024463A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2E6984C39A4526B7B45FA1 /* SystemConfiguration.framework */; };
+		8644A694202113CC0024463A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8644A693202113CC0024463A /* UIKit.framework */; };
+		8644A696202113D80024463A /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8644A695202113D80024463A /* OneSignal.framework */; };
+		AB99B05784154376BAF0D355 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 693B00775CAC4171854F7843 /* CDVBarcodeScanner.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B355343C6C834EE9B6179AAD /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 859D3C69A5A6467E8D3CAF8D /* CDVBarcodeScanner.bundle */; };
+		CCE1388D3E1A4339B525F3A9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77B57DDBB4F29A0EF08B2 /* CoreVideo.framework */; };
+		E00F7FDE6A994D6BA0467D87 /* OneSignalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB835BB34F04B5DA019FFFB /* OneSignalPush.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
 		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
-		86028C8C201E0413002C2003 /* PBXContainerItemProxy */ = {
+		8644A67E202113440024463A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 86028C85201E0413002C2003;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
-		86A2565D201E0013006ED860 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C0C01EB21E3911D50056E6CB;
 			remoteInfo = Cordova;
 		};
+		8644A68B2021136E0024463A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8644A6842021136E0024463A;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		86028C92201E0413002C2003 /* Embed App Extensions */ = {
+		8644A6912021136E0024463A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				86028C8E201E0413002C2003 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+				8644A68D2021136E0024463A /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,12 +83,14 @@
 
 /* Begin PBXFileReference section */
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ScannerApp/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		0486E0B370D04F0CA3B1BC6C /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		02956FD027C14B4D6CFC2C6C /* libPods-ScannerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScannerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* ScannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A77B57DDBB4F29A0EF08B2 /* CoreVideo.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		2E36B2CBFCC2482B85A87AD0 /* OneSignalPush.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = OneSignalPush.h; path = "onesignal-cordova-plugin/OneSignalPush.h"; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -96,36 +98,34 @@
 		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
+		32776DFA8B1149B8913FEC28 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* ScannerApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ScannerApp-Prefix.pch"; sourceTree = "<group>"; };
-		3F234F18C50D41D49DDB177C /* CoreVideo.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		474ED111029F46A8BB7845AC /* CoreImage.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		5C0B51FBEFCB4D468A5FA4E1 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		60633BE78F1672EE9D312E1E /* libPods-ScannerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScannerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A23388F77674C26AC4F11FE /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3AB835BB34F04B5DA019FFFB /* OneSignalPush.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = OneSignalPush.m; path = "onesignal-cordova-plugin/OneSignalPush.m"; sourceTree = "<group>"; };
+		433A3617CE19414B82A602A0 /* QuartzCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		693B00775CAC4171854F7843 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = CDVBarcodeScanner.mm; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = ScannerApp/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		86028C81201E036F002C2003 /* ScannerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ScannerApp.entitlements; path = ScannerApp/ScannerApp.entitlements; sourceTree = "<group>"; };
-		86028C86201E0413002C2003 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		86028C88201E0413002C2003 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		86028C89201E0413002C2003 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		86028C8B201E0413002C2003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86385DAFC1464EE88F98E036 /* CDVNotification.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; };
-		8649EE90201E0699002C0AFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8649EE93201E06E0002C0AFF /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		8C61360D561747A29EBAAD8E /* QuartzCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73E0931FA43142738A3844EB /* CoreImage.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		859D3C69A5A6467E8D3CAF8D /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = CDVBarcodeScanner.bundle; sourceTree = "<group>"; };
+		8644A680202113570024463A /* ScannerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ScannerApp.entitlements; path = ScannerApp/ScannerApp.entitlements; sourceTree = "<group>"; };
+		8644A6852021136E0024463A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8644A6872021136E0024463A /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		8644A6882021136E0024463A /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		8644A68A2021136E0024463A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8644A693202113CC0024463A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8644A695202113D80024463A /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ScannerApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ScannerApp-Info.plist"; path = "ScannerApp/ScannerApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		925BFEED64BD4578A6FFCDAC /* CDVNotification.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = CDVNotification.bundle; sourceTree = "<group>"; };
-		968EE611F22E4D8B8319C101 /* OneSignalPush.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = OneSignalPush.h; path = "onesignal-cordova-plugin/OneSignalPush.h"; sourceTree = "<group>"; };
-		9A3E8CC6DD2B4D5BAF0B44DE /* OneSignalPush.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = OneSignalPush.m; path = "onesignal-cordova-plugin/OneSignalPush.m"; sourceTree = "<group>"; };
-		A2B70054D1244FAEB832DCC9 /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "zxing-all-in-one.cpp"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.cpp"; sourceTree = "<group>"; };
-		ADCC6A2536BA4AB79F22E09F /* scannerOverlay.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = scannerOverlay.xib; sourceTree = "<group>"; };
-		C045B2A84B0A4BEBBF7F584E /* CDVNotification.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; };
-		C33BCDC382A04E9086E7623B /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = CDVBarcodeScanner.bundle; sourceTree = "<group>"; };
-		C885840C707544A586D321BE /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = CDVBarcodeScanner.mm; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; };
-		C991C52394054B2CA99FCD6E /* libiconv.dylib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		DC3B71713D744C7DB0AB7797 /* zxing-all-in-one.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "zxing-all-in-one.h"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.h"; sourceTree = "<group>"; };
+		AAB2DEC07A204C38A1BA41F1 /* libiconv.dylib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		AC978C4B183D4FA98990D8AB /* CDVNotification.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = CDVNotification.bundle; sourceTree = "<group>"; };
+		B4DDBED82CD44720BA6CECEB /* scannerOverlay.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; path = scannerOverlay.xib; sourceTree = "<group>"; };
+		C1A434564C954B5CB1091399 /* zxing-all-in-one.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "zxing-all-in-one.h"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.h"; sourceTree = "<group>"; };
+		C359A13943B34296B07A6DED /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "zxing-all-in-one.cpp"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.cpp"; sourceTree = "<group>"; };
+		CC2E6984C39A4526B7B45FA1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DF362A4F206E4F618ABE9DC1 /* CDVNotification.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; };
+		E9E13311FB5A4E5190211960 /* CDVNotification.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		F220158C0D574381B636472D /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ScannerApp/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,24 +135,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				551110D9844D47BAAAE22968 /* AudioToolbox.framework in Frameworks */,
-				D6C617DC6EB849D49A48A51C /* libiconv.dylib in Frameworks */,
-				0FC2F68B087D42BD86ADF826 /* AVFoundation.framework in Frameworks */,
-				CD232B9848BF4A378E03F783 /* CoreVideo.framework in Frameworks */,
-				85A9BA78DC1F46BABA20134B /* QuartzCore.framework in Frameworks */,
-				8828D258DA944EEA8D58262C /* CoreImage.framework in Frameworks */,
-				322285442BB5EE405084C93C /* libPods-ScannerApp.a in Frameworks */,
-				E3D309CA45B244339BA41251 /* SystemConfiguration.framework in Frameworks */,
+				229C62AE902544D29BF3CA8D /* libiconv.dylib in Frameworks */,
+				39E31F7EA3C24AEA9D47F01B /* AVFoundation.framework in Frameworks */,
+				CCE1388D3E1A4339B525F3A9 /* CoreVideo.framework in Frameworks */,
+				6A90786DB73C4C99BD9EB37B /* QuartzCore.framework in Frameworks */,
+				1D1CF4E64BE6475F9D10BE05 /* CoreImage.framework in Frameworks */,
+				32B7FFFEDEE24B8E862B5C59 /* AudioToolbox.framework in Frameworks */,
+				5B1074CA2E9D41FAB31E4420 /* SystemConfiguration.framework in Frameworks */,
+				3804756B3A8595EDAFCAF81F /* libPods-ScannerApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86028C83201E0413002C2003 /* Frameworks */ = {
+		8644A6822021136E0024463A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8649EE94201E06E0002C0AFF /* OneSignal.framework in Frameworks */,
-				8649EE92201E069F002C0AFF /* SystemConfiguration.framework in Frameworks */,
-				8649EE91201E0699002C0AFF /* UIKit.framework in Frameworks */,
+				8644A696202113D80024463A /* OneSignal.framework in Frameworks */,
+				8644A694202113CC0024463A /* UIKit.framework in Frameworks */,
+				8644A692202113C30024463A /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* ScannerApp.app */,
-				86028C86201E0413002C2003 /* OneSignalNotificationServiceExtension.appex */,
+				8644A6852021136E0024463A /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,19 +184,19 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				86028C81201E036F002C2003 /* ScannerApp.entitlements */,
+				8644A680202113570024463A /* ScannerApp.entitlements */,
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
 				EB87FDF11871DA420020F90C /* Staging */,
-				301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */,
+				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				307C750510C5A3420062BCA9 /* Plugins */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				86028C87201E0413002C2003 /* OneSignalNotificationServiceExtension */,
+				8644A6862021136E0024463A /* OneSignalNotificationServiceExtension */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				A4151F1898FF264A83BE0664 /* Pods */,
+				E36AAB9D2FD0A1CBC189066F /* Pods */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* ScannerApp-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
-				925BFEED64BD4578A6FFCDAC /* CDVNotification.bundle */,
-				ADCC6A2536BA4AB79F22E09F /* scannerOverlay.xib */,
-				C33BCDC382A04E9086E7623B /* CDVBarcodeScanner.bundle */,
+				B4DDBED82CD44720BA6CECEB /* scannerOverlay.xib */,
+				859D3C69A5A6467E8D3CAF8D /* CDVBarcodeScanner.bundle */,
+				AC978C4B183D4FA98990D8AB /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = ScannerApp/Resources;
@@ -230,16 +230,16 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8649EE93201E06E0002C0AFF /* OneSignal.framework */,
-				8649EE90201E0699002C0AFF /* UIKit.framework */,
-				0486E0B370D04F0CA3B1BC6C /* AudioToolbox.framework */,
-				C991C52394054B2CA99FCD6E /* libiconv.dylib */,
-				5C0B51FBEFCB4D468A5FA4E1 /* AVFoundation.framework */,
-				3F234F18C50D41D49DDB177C /* CoreVideo.framework */,
-				8C61360D561747A29EBAAD8E /* QuartzCore.framework */,
-				474ED111029F46A8BB7845AC /* CoreImage.framework */,
-				60633BE78F1672EE9D312E1E /* libPods-ScannerApp.a */,
-				F220158C0D574381B636472D /* SystemConfiguration.framework */,
+				8644A695202113D80024463A /* OneSignal.framework */,
+				8644A693202113CC0024463A /* UIKit.framework */,
+				AAB2DEC07A204C38A1BA41F1 /* libiconv.dylib */,
+				32776DFA8B1149B8913FEC28 /* AVFoundation.framework */,
+				24A77B57DDBB4F29A0EF08B2 /* CoreVideo.framework */,
+				433A3617CE19414B82A602A0 /* QuartzCore.framework */,
+				73E0931FA43142738A3844EB /* CoreImage.framework */,
+				3A23388F77674C26AC4F11FE /* AudioToolbox.framework */,
+				CC2E6984C39A4526B7B45FA1 /* SystemConfiguration.framework */,
+				02956FD027C14B4D6CFC2C6C /* libPods-ScannerApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libCordova.a */,
-				86A2565E201E0013006ED860 /* Cordova.framework */,
+				8644A67F202113440024463A /* Cordova.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,29 +266,29 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				86385DAFC1464EE88F98E036 /* CDVNotification.m */,
-				C045B2A84B0A4BEBBF7F584E /* CDVNotification.h */,
-				C885840C707544A586D321BE /* CDVBarcodeScanner.mm */,
-				A2B70054D1244FAEB832DCC9 /* zxing-all-in-one.cpp */,
-				DC3B71713D744C7DB0AB7797 /* zxing-all-in-one.h */,
-				9A3E8CC6DD2B4D5BAF0B44DE /* OneSignalPush.m */,
-				968EE611F22E4D8B8319C101 /* OneSignalPush.h */,
+				693B00775CAC4171854F7843 /* CDVBarcodeScanner.mm */,
+				C359A13943B34296B07A6DED /* zxing-all-in-one.cpp */,
+				C1A434564C954B5CB1091399 /* zxing-all-in-one.h */,
+				DF362A4F206E4F618ABE9DC1 /* CDVNotification.m */,
+				E9E13311FB5A4E5190211960 /* CDVNotification.h */,
+				3AB835BB34F04B5DA019FFFB /* OneSignalPush.m */,
+				2E36B2CBFCC2482B85A87AD0 /* OneSignalPush.h */,
 			);
 			name = Plugins;
 			path = ScannerApp/Plugins;
 			sourceTree = SOURCE_ROOT;
 		};
-		86028C87201E0413002C2003 /* OneSignalNotificationServiceExtension */ = {
+		8644A6862021136E0024463A /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
-				86028C88201E0413002C2003 /* NotificationService.h */,
-				86028C89201E0413002C2003 /* NotificationService.m */,
-				86028C8B201E0413002C2003 /* Info.plist */,
+				8644A6872021136E0024463A /* NotificationService.h */,
+				8644A6882021136E0024463A /* NotificationService.m */,
+				8644A68A2021136E0024463A /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
-		A4151F1898FF264A83BE0664 /* Pods */ = {
+		E36AAB9D2FD0A1CBC189066F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -311,33 +311,33 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ScannerApp" */;
 			buildPhases = (
-				D5D6411FAFAAA4E4DE5CD3D2 /* [CP] Check Pods Manifest.lock */,
+				0849D77DB3E4603D730BF0B5 /* [CP] Check Pods Manifest.lock */,
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-				FD387C96DA81630FB1EFFF6A /* [CP] Embed Pods Frameworks */,
-				68770754661C58815E75214C /* [CP] Copy Pods Resources */,
-				86028C92201E0413002C2003 /* Embed App Extensions */,
+				F8FB535763F99D81D4F9E661 /* [CP] Embed Pods Frameworks */,
+				A12C8B7B528E4CDAD368DC14 /* [CP] Copy Pods Resources */,
+				8644A6912021136E0024463A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
-				86028C8D201E0413002C2003 /* PBXTargetDependency */,
+				8644A68C2021136E0024463A /* PBXTargetDependency */,
 			);
 			name = ScannerApp;
 			productName = ScannerApp;
 			productReference = 1D6058910D05DD3D006BFB54 /* ScannerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		86028C85201E0413002C2003 /* OneSignalNotificationServiceExtension */ = {
+		8644A6842021136E0024463A /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86028C8F201E0413002C2003 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildConfigurationList = 8644A68E2021136E0024463A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				86028C82201E0413002C2003 /* Sources */,
-				86028C83201E0413002C2003 /* Frameworks */,
-				86028C84201E0413002C2003 /* Resources */,
+				8644A6812021136E0024463A /* Sources */,
+				8644A6822021136E0024463A /* Frameworks */,
+				8644A6832021136E0024463A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -345,7 +345,7 @@
 			);
 			name = OneSignalNotificationServiceExtension;
 			productName = OneSignalNotificationServiceExtension;
-			productReference = 86028C86201E0413002C2003 /* OneSignalNotificationServiceExtension.appex */;
+			productReference = 8644A6852021136E0024463A /* OneSignalNotificationServiceExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 66F36ZCUE8;
@@ -365,7 +365,7 @@
 							};
 						};
 					};
-					86028C85201E0413002C2003 = {
+					8644A6842021136E0024463A = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 66F36ZCUE8;
 						ProvisioningStyle = Automatic;
@@ -385,13 +385,13 @@
 			projectReferences = (
 				{
 					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
-					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* ScannerApp */,
-				86028C85201E0413002C2003 /* OneSignalNotificationServiceExtension */,
+				8644A6842021136E0024463A /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -404,11 +404,11 @@
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		86A2565E201E0013006ED860 /* Cordova.framework */ = {
+		8644A67F202113440024463A /* Cordova.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cordova.framework;
-			remoteRef = 86A2565D201E0013006ED860 /* PBXContainerItemProxy */;
+			remoteRef = 8644A67E202113440024463A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -421,13 +421,13 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
-				1C06EDE285D64C98BA3AE4D8 /* CDVNotification.bundle in Resources */,
-				DDFEA150858846C588CB542F /* scannerOverlay.xib in Resources */,
-				CF24C0B6D1B14DF4B7E629AE /* CDVBarcodeScanner.bundle in Resources */,
+				72CF9944777F43A9B4584B26 /* scannerOverlay.xib in Resources */,
+				B355343C6C834EE9B6179AAD /* CDVBarcodeScanner.bundle in Resources */,
+				06007E14BEEB468BA01D6576 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86028C84201E0413002C2003 /* Resources */ = {
+		8644A6832021136E0024463A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,37 +437,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		304B58A110DAC018002A0835 /* Copy www directory */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy www directory";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
-			showEnvVarsInLog = 0;
-		};
-		68770754661C58815E75214C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScannerApp/Pods-ScannerApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5D6411FAFAAA4E4DE5CD3D2 /* [CP] Check Pods Manifest.lock */ = {
+		0849D77DB3E4603D730BF0B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,7 +455,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD387C96DA81630FB1EFFF6A /* [CP] Embed Pods Frameworks */ = {
+		304B58A110DAC018002A0835 /* Copy www directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy www directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
+			showEnvVarsInLog = 0;
+		};
+		A12C8B7B528E4CDAD368DC14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScannerApp/Pods-ScannerApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8FB535763F99D81D4F9E661 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -510,18 +510,18 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				9DE1064C738745C690F28595 /* CDVNotification.m in Sources */,
-				EB3406112B714D81B43A84FE /* CDVBarcodeScanner.mm in Sources */,
-				1F435311EECB46DA9599BB68 /* zxing-all-in-one.cpp in Sources */,
-				C124F3B1252A424C96B45FED /* OneSignalPush.m in Sources */,
+				AB99B05784154376BAF0D355 /* CDVBarcodeScanner.mm in Sources */,
+				22E02C9C59694A5F96B15D10 /* zxing-all-in-one.cpp in Sources */,
+				5A48AADE2CB748D98E34B50D /* CDVNotification.m in Sources */,
+				E00F7FDE6A994D6BA0467D87 /* OneSignalPush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86028C82201E0413002C2003 /* Sources */ = {
+		8644A6812021136E0024463A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86028C8A201E0413002C2003 /* NotificationService.m in Sources */,
+				8644A6892021136E0024463A /* NotificationService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,10 +533,10 @@
 			name = CordovaLib;
 			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
 		};
-		86028C8D201E0413002C2003 /* PBXTargetDependency */ = {
+		8644A68C2021136E0024463A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 86028C85201E0413002C2003 /* OneSignalNotificationServiceExtension */;
-			targetProxy = 86028C8C201E0413002C2003 /* PBXContainerItemProxy */;
+			target = 8644A6842021136E0024463A /* OneSignalNotificationServiceExtension */;
+			targetProxy = 8644A68B2021136E0024463A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -601,7 +601,7 @@
 			};
 			name = Release;
 		};
-		86028C90201E0413002C2003 /* Debug */ = {
+		8644A68F2021136E0024463A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -609,27 +609,40 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 66F36ZCUE8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
@@ -643,7 +656,7 @@
 			};
 			name = Debug;
 		};
-		86028C91201E0413002C2003 /* Release */ = {
+		8644A6902021136E0024463A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -651,10 +664,19 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -662,11 +684,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 66F36ZCUE8;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/OneSignal/iOS_SDK/OneSignalSDK/Framework",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
@@ -688,28 +713,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -728,27 +740,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -771,11 +771,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86028C8F201E0413002C2003 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+		8644A68E2021136E0024463A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86028C90201E0413002C2003 /* Debug */,
-				86028C91201E0413002C2003 /* Release */,
+				8644A68F2021136E0024463A /* Debug */,
+				8644A6902021136E0024463A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

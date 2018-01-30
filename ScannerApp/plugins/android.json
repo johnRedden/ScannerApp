@@ -18,11 +18,10 @@
     },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
-    }
-  },
-  "dependent_plugins": {
+    },
     "cordova-plugin-compat": {
       "PACKAGE_NAME": "io.cordova.myapp804c9b"
     }
-  }
+  },
+  "dependent_plugins": {}
 }

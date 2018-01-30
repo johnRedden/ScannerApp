@@ -8,11 +8,11 @@ $(document).ready(function () {
     var currDay = d.getDay();
     var currHour = d.getHours();
     var currMin = d.getMinutes();
-    var notifyDay;
-    var notifyHour;
-    var notifyMin;
+    var notifyDay
+    var notifyHour
+    var notifyMin
 
-    console.log(d.getDay(), d.getHours(), d.getMinutes())
+    
 
     function toMilitary() {
         notifyMin = nH.substr(3, 2);
@@ -57,7 +57,7 @@ $(document).ready(function () {
         );
         navigator.notification.beep(1);
     };
-    
+
 
     function checkTime() {
         if (currDay == notifyDay && currHour == notifyHour && currMin == notifyMin) {
@@ -85,7 +85,7 @@ $(document).ready(function () {
     function populateEventTimeChecker() {
         var newListHtml2 = "";
         for (var i = 0; i < eventKeysTwo.length; i++) {
-            newListHtml2 += eventObjsTwo[i].text + ": " + eventObjsTwo[i].startTime + ","
+            newListHtml2 += eventObjsTwo[i].startTime + ","
             //window.alert(eventKeys[i]);
         }
         console.log(newListHtml2)

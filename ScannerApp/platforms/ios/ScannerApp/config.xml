@@ -19,11 +19,14 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="BarcodeScanner">
+        <param name="ios-package" value="CDVBarcodeScanner" />
+    </feature>
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
-    <feature name="BarcodeScanner">
-        <param name="ios-package" value="CDVBarcodeScanner" />
+    <feature name="OneSignalPush">
+        <param name="ios-package" value="OneSignalPush" />
     </feature>
     <name>ScannerApp</name>
     <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, and the Windows Universal Platform.</description>
@@ -80,7 +83,4 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="SplashScreen" value="screen" />
     <preference name="windows-target-version" value="10.0" />
-    <feature name="OneSignalPush">
-        <param name="ios-package" value="OneSignalPush" />
-    </feature>
 </widget>
