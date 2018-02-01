@@ -17,13 +17,12 @@
        under the License.
 */
 
+apply plugin: 'com.android.application'
 
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
     }
 
     // Switch the Android Gradle plugin version requirement depending on the
@@ -31,33 +30,22 @@ buildscript {
     // http://tools.android.com/tech-docs/new-build-system/version-compatibility
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'com.android.tools.build:gradle:2.1.0'
     }
 }
 
-// plugins {
-//     id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.8.1'
-// }
-// apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
-
-// repositories {
-//     maven { url 'https://maven.google.com' }
-// }
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {
+        mavenCentral();
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.14.1'
+    gradleVersion = '2.13'
 }
 
-apply plugin: 'com.android.application'
 // Configuration properties. Set these via environment variables, build-extras.gradle, or gradle.properties.
 // Refer to: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 ext {
@@ -101,7 +89,6 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "phonegap-plugin-barcodescanner/myapp804c9b-barcodescanner.gradle"
-apply from: "onesignal-cordova-plugin/myapp804c9b-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -178,11 +165,7 @@ android {
     }
 
     defaultConfig {
-        manifestPlaceholders = [onesignal_app_id: "ba2f841b-3bdb-46f3-89fa-0e1f45eaab2a",
-                                // Project number pulled from dashboard, local value is ignored.
-                                onesignal_google_project_number: "405307790686"]
-        
-        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
+        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
 
         if (cdvMinSdkVersion != null) {
@@ -260,15 +243,13 @@ android {
     if (cdvDebugSigningPropertiesFile) {
         addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
     }
-    buildToolsVersion '27.0.3'
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
-    debugCompile(project(path: "CordovaLib", configuration: "debug"))
-    releaseCompile(project(path: "CordovaLib", configuration: "release"))
-    compile "com.onesignal:OneSignal:3.7.1"
+    debugCompile project(path: "CordovaLib", configuration: "debug")
+    releaseCompile project(path: "CordovaLib", configuration: "release")
     // SUB-PROJECT DEPENDENCIES END
 }
 
@@ -286,7 +267,7 @@ def promptForReleaseKeyPassword() {
 
 gradle.taskGraph.whenReady { taskGraph ->
     taskGraph.getAllTasks().each() { task ->
-        if (task.name == 'validateReleaseSigning' || task.name == 'validateSigningRelease') {
+        if (task.name == 'validateReleaseSigning') {
             promptForReleaseKeyPassword()
         }
     }
