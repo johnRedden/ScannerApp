@@ -7,21 +7,22 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.myapp804c9b"
-        },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "io.cordova.myapp804c9b"
         },
-        "cordova-plugin-splashscreen": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.myapp804c9b"
         },
-        "cordova-plugin-whitelist": {
+        "onesignal-cordova-plugin": {
             "PACKAGE_NAME": "io.cordova.myapp804c9b"
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "io.cordova.myapp804c9b"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "io.cordova.myapp804c9b"
+        }
+    }
 }

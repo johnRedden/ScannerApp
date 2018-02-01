@@ -19,12 +19,6 @@
         },
         "onesignal-cordova-plugin": {
             "PACKAGE_NAME": "io.cordova.myapp804c9b"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.myapp804c9b"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
         }
     },
     "dependent_plugins": {}
