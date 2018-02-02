@@ -27,7 +27,7 @@
         ref.orderByChild("registrationNumber").equalTo(userRegNum).once('value')
             .then(function (dataSnapshot) {
                 //console.log(dataSnapshot.val());
-                if (dataSnapshot.val() == null) {
+                if (dataSnapshot.val() === null) {
                     $("#logMessage").html("Registration number not found.");
                     $("#userRegNumber").focus();
                     return;
@@ -51,7 +51,7 @@
             function (result) {
                 if (!result.cancelled) {
                     //only want QR code scanner functionality
-                    if (result.format == "QR_CODE") {
+                    if (result.format === "QR_CODE") {
 
                         var ref = database.ref("participants/" + result.text);
                         ref.once('value').then(function (dataSnapshot) {
@@ -90,11 +90,11 @@
             $("#appMessage").html(snapshot.val().message);
             $("#surveyLink").attr("src", snapshot.val().surveyURL);
 
-            if ((snapshot.val().surveyView == "on") && (loggedIn == true) ) {
+            if ((snapshot.val().surveyView === "on") && (loggedIn === true) ) {
                 $("#surveyOut").hide();
                 $("#surveyLink").show();
                 $("#surveyNotTime").hide();
-            } else if (snapshot.val().surveyView == "off") {
+            } else if (snapshot.val().surveyView === "off") {
                 $("#surveyOut").hide();
                 $("#surveyLink").hide();
                 $("#surveyNotTime").show();

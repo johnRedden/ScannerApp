@@ -17,11 +17,11 @@ module.exports = [
         ]
     },
     {
-        "id": "onesignal-cordova-plugin.OneSignal",
-        "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
-        "pluginId": "onesignal-cordova-plugin",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
         "clobbers": [
-            "OneSignal"
+            "navigator.splashscreen"
         ]
     },
     {
@@ -36,10 +36,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-dialogs": "1.3.3",
-    "cordova-plugin-whitelist": "1.2.2",
-    "onesignal-cordova-plugin": "2.2.5",
     "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-dialogs": "1.3.3",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-barcodescanner": "6.0.6"
 };
 // BOTTOM OF METADATA

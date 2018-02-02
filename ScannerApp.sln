@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ScannerApp", "ScannerApp\ScannerApp.jsproj", "{65669655-1664-4F65-8C79-A385333F1D2D}"
 EndProject
@@ -34,9 +34,9 @@ Global
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Debug|Windows-x86.ActiveCfg = Debug|Windows-x86
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Debug|Windows-x86.Build.0 = Debug|Windows-x86
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Debug|Windows-x86.Deploy.0 = Debug|Windows-x86
-		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.ActiveCfg = Release|Android
-		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.Build.0 = Release|Android
-		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.Deploy.0 = Release|Android
+		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.ActiveCfg = Debug|Android
+		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.Build.0 = Debug|Android
+		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|Android.Deploy.0 = Debug|Android
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|iOS.ActiveCfg = Release|iOS
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|iOS.Build.0 = Release|iOS
 		{65669655-1664-4F65-8C79-A385333F1D2D}.Release|iOS.Deploy.0 = Release|iOS
@@ -52,5 +52,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {982C7A54-82C7-4900-A059-D296B77A0A30}
 	EndGlobalSection
 EndGlobal
